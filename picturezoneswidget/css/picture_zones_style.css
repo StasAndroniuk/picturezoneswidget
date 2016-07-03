@@ -1,0 +1,45 @@
+.car-container
+{
+    background: #fff;
+    width:100%;
+}
+.pic-container
+{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top:50px;
+    margin-bottom: 50px;
+    width:60%;
+}
+.area-info
+{
+    right:0;
+    margin-right: 40px;
+    position: absolute;
+    border: 2px solid;
+    border-color: #ea4f5f;
+    background: #fff;
+    width: 200px;
+    border-radius: 5px;
+    display: none;
+}
+.area-title-container
+{
+    position: absolute;
+    left: 0;
+    margin-left: 40px;
+   width: 250px;
+}
+.area-title
+{
+    background: #ea4f5f;
+    border-radius: 5px;
+    border:1px solid;
+    border-color: #ea4f5f;
+    color: #fff;
+    padding: 7px;
+    font-weight: 600;
+    margin: 5px;
+    float: left;
+    cursor: pointer;
+} 

@@ -1,0 +1,29 @@
+<div class="settings">
+<h3>Settings</h3>
+<p>Notice: You can use service https://www.image-map.net/ or similar to generate area code and put it to plugin</p>
+<?php echo'<input id="'. $areaNumber['id'].'" type="hidden" name="'.$areaNumber['name'].'" value="'.$areaNumber['value'].'" class="areanum">';?>
+
+<?php for ($i=0; $i < $areaNumber['value']; $i++):?>
+
+    <div id="area<?php echo $i;?>" class="area">
+    <input id="area<?php echo $i;?>delete" type="hidden" name="<?php echo $areas[$i]['delete']['name'];;?>" value="<?php echo $areas[$i]['delete']['value'];?>">
+    <p align="right"><a onclick="DeleteArea('#area<?php echo $i;?>','#area<?php echo $i;?>delete');" class="but" style="float:right;">Delete</a></p>
+         Name of area:(unique)<input type="text" name="<?php echo $areas[$i]['areaname']['name'];;?>" value="<?php echo $areas[$i]['areaname']['value'];?>">
+        Link of area: <input type="text" name="<?php echo $areas[$i]['arealink']['name'];;?>" value="<?php echo $areas[$i]['arealink']['value'];?>">
+        Target of area:
+        <select name="<?php echo $areas[$i]['areatarget']['name'];?>">
+            <option value="">---</option>
+            <option value="_blank" <?php if($areas[$i]['areatarget']['value']=='_blank') echo'selected'; ?>>_blank</option>
+            <option value="_parent" <?php if($areas[$i]['areatarget']['value']=='_parent') echo'selected'; ?>>_parent</option>
+            <option value="_self" <?php if($areas[$i]['areatarget']['value']=='_self') echo'selected'; ?>>_self</option>
+            <option value="_top" <?php if($areas[$i]['areatarget']['value']=='_top') echo'selected'; ?>>_top</option>
+        </select><br>
+        Title:<input type="text"  name="<?php echo $areas[$i]['areatitle']['name'];;?>" value="<?php echo $areas[$i]['areatitle']['value'];?>">
+        <br>
+        <p><span>Area code</span><span style="margin-left:500px;">Area div content</span></p>
+        <textarea name="<?php echo $areas[$i]['areacode']['name'];?>" cols="40" rows="5" style="float:left;"><?php echo $areas[$i]['areacode']['value'];?></textarea>
+        <textarea name="<?php echo $areas[$i]['areadivcontent']['name'];?>" cols="40" rows="5" style="margin-left:140px;"><?php echo $areas[$i]['areadivcontent']['value'];?></textarea>
+    </div>
+<?php endfor;?>
+<a class="add but" onClick="AddNewArea('<?php echo $this->id_base;?>','<?php echo $this->number;?>','<?php echo $this->id;?>');" style="float:right;">Add new area</a>
+</div>

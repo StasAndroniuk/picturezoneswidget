@@ -1,0 +1,35 @@
+.settings
+{
+    width:900px;
+    background: #fff;
+    color:#000;
+    top:0;
+    left: -900px;
+    display: none;
+    position:  absolute;
+    z-index: 10000;
+}
+.but
+{
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px;
+    background: #ccc;
+    color:#000;
+    cursor: pointer;
+    float: left;
+    margin-right: 5px;
+}
+.add
+{
+    float: right;
+    margin: 20px;
+    background: #0f0;
+}
+.area
+{
+    border:1px solid blueviolet;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top:10px;
+}
