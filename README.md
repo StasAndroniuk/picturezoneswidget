@@ -1,5 +1,6 @@
 # picturezoneswidget
 Plugin for wordpress, that can divide picture on areas and  highlight this areas when mouse is hover it
+To use this plugin you have to include jquery library in admin panel of your website
 
 You can add your picture with areas to the widget, put every where on you website. 
 1. Install widget. copy files to wp-content/plugins. Then install it in admin panel.
